@@ -1,0 +1,21 @@
+body {
+  background-color: #f9fafb;
+  color: #111827;
+  transition-property: color, background-color;
+  transition-duration: 150ms;
+}
+
+body.dark {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+
+html.small { font-size: 14px; }
+html.medium { font-size: 16px; }
+html.large { font-size: 18px; }
+
+.dark input, .dark button, .dark select, .dark textarea {
+  background-color: #1f2937;
+  border-color: #374151;
+  color: #fff;
+}
