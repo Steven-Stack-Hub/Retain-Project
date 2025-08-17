@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
-import FeedCard from '@/components/FeedCard';
-import RefreshMeter from '@/components/RefreshMeter';
+import FeedCard from '../../../components/FeedCard';
+import RefreshMeter from '../../../components/RefreshMeter';
 
 export default function Feed() {
   const supabase = createClientComponentClient();
