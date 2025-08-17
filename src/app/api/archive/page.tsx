@@ -10,6 +10,7 @@ export default function Archive() {
 
   useEffect(() => {
     const load = async () => {
+      // ✅ Fixed line:
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) return;
 
@@ -42,9 +43,12 @@ export default function Archive() {
       <div className="space-y-4">
         {reads.map(r => (
           <div key={r.id} className="bg-white p-4 rounded shadow-sm border">
-            <a href={r.articles.link} target="_blank" className="font-medium text-blue-600 hover:underline">
+            <a href={r.articles.link} target="_blank" className="font-medium hover:underline">
               {r.articles.title}
             </a>
+            <p className="text-sm text-gray-600">
+              {r.articles.source} • {new Date(r.read_at).toLocaleDateString()}
+            </p>
           </div>
         ))}
       </div>
